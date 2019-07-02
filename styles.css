@@ -1,0 +1,183 @@
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background-color: #729fcf;
+}
+
+h2 {
+  font-family: "trajan";
+}
+
+.main {
+  background-image: url("images/Fine-Lit.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  padding-left: 5%;
+}
+
+.second {
+  background-position: top;
+  background-size: contain;
+}
+
+.blocks {
+  justify-content: space-around;
+  display: flex;
+  width: auto;
+  align-items: stretch;
+}
+
+#blocks {
+  color: #c4a000;
+  width: 30%;
+  flex-grow: 1;
+  margin:3% 0.5%;
+  padding: 0;
+}
+
+#socialmedia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#socialmedia img {
+  width: 9rem;
+  flex-grow: 1;
+  height: 6rem;
+}
+
+.container {
+  border: 5rem;
+  width: 95%;
+  position: top;
+  display: inline-flex;
+  border-radius: 45px;
+  margin: 0;
+  height: auto;
+  padding: 0 1.2%;
+}
+
+.main {
+  height: 40%;
+  padding-top: 1rem;
+}
+
+.main img {
+  width: auto;
+  display: block;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.size {
+  color: #c4a000; 
+  font-size: 2.5rem;
+  padding: 0.5% 0;
+  margin: 0;
+}
+
+nav {
+  align-items: center;
+  background-color: #5c3566;
+  color: #729fcf;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#logo img {
+  border-radius: 0.5rem;
+  margin: 0%;
+  width: 92px;
+  height: 45px;
+}
+
+ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding-top: 3%;
+  text-align: center;
+  display: inline-block;
+  padding-left: 5%;
+}
+
+@media only screen and (max-width: 960px){
+  .main {
+    padding-top: 0;
+  }
+  .container {
+    right:0;
+    width: 100%;
+    border-radius: 0;
+  }
+  li {
+    padding-left: none; 
+  }
+  .size {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+.container {
+  border-radius: 0;
+}
+.main {
+  background-image: none;
+}
+footer nav {
+  display: none;
+}
+.size {
+  font-size: 1rem;
+}
+}
+
+#buttons {
+  height: 110%;
+  width: auto;
+}
+
+#smbutton {
+  background-color: #729fcf;
+  margin: 2.5%;
+  width: auto;
+}
+
+a {
+  display: block;
+  padding: 0 .4rem;
+  border-radius: 5px;
+  background-color: #5c3566;
+  text-align: start;
+  font-family: Helvetica;
+  font-size: 1.3rem;
+  color: #729fcf;
+  transition-property: background-color color;
+  transition-duration: 550ms;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #204a87;
+  background-color: #c4a000;
+}
+
+#smbutton:hover {
+  background-color: none;
+}
+
+#logo:hover {
+  background-color: #c4a000;
+}
