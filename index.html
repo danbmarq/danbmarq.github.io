@@ -1,55 +1,74 @@
 <html>
 <head>
-	<meta charset="UTF-8">
-	<link rel="icon" type="image/png" sizes="32x32" href="Favicon\favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="Favicon\favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Favicon\favicon-16x16.png">
-    <link rel="manifest" href="Favicon\manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="Favicon\ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-	<link rel=stylesheet href=styles.css>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-2628205090936717",
-    enable_page_level_ads: true
-  });
-</script>
-	<title> Fine-Lit </title>
+    <link href='loan.css' rel='stylesheet' type="text/css">
+    <script type="text/javascript" src="loan.js"></script>
 </head>
 
 <body>
-	<div class=main>
-		<nav class=container>
-		<a href="index.html" id=logo><img src="Logos\apple-icon-76x76.png"></a>
-			<ul>
-			  <li><a href="AboutMe.html" id=buttons> About Us</a>
-			  <li><a href="News.html" id=buttons> News </a>
-			  <li><a href="Blog.html" id=buttons> Blog </a>
-			</ul>
-		</nav>
-	</div>
-	<div class=second>
-			<ul class=blocks>
-				<li id=blocks>
-					<img src="images\Word of the day.jpg" alt="word of the day">
-				</li>
-				<li id=blocks>
-					<div id=socialmedia>
-						<a href="https://www.instagram.com/p/ByfwlhxADeE/" id=smbutton><img src="images\S.M\Planning for the Future.PNG"></a>
-						<a href="https://www.instagram.com/p/Bya_A5ggcnW/" id=smbutton><img src="images\S.M\Financial Planning.PNG"></a>
-						<a href="https://www.instagram.com/p/ByQrVsRAjR2/" id=smbutton><img src="images\S.M\Growing Debt.PNG"></a>
-						<a href="https://www.instagram.com/p/ByBdXaWgSEp/" id=smbutton><img src="images\S.M\Saving Goals.PNG"></a>
-					</div>
-				</li>
-				<li id=blocks>
-					<img src="images\Graph.png" alt="watchlist chart">
-				</li>
-			</ul>
-	</div>
-	<div class=second>
-		<h1>Advertisement</h1>
-	</div>
+    <div id='calculator'>
+        <h2> Loan Calculator</h2>
+        <div id="loan_src">
+
+            <form name='loan_form'>
+                <table>
+
+                    <tr>
+                        <td>Loan Amount:<br/><span style="font-size: 75%">Ex. $30,000.00 = 30000</span></td>
+                        <td><input type="text" name="loan_amt" size="10" value="15000"/></td>
+                    </tr>
+                    <tr>
+                        <td>Number of Periods: <br/><span style="font-size: 75%">Ex. 3 Yrs compounded monthly (3*12) = 36</span></td>
+                        <td><input type="text" name="periods" size="10" value="36"/></td>
+                    </tr>
+                    <tr>
+                        <td>Interest Rate: <br/><span style="font-size: 75%">Ex. 4.5% APR compounded monthly (4.5/12) = 0.375</span></td>
+                        <td><input type="text" name="int_rate" size="10" value="0.375"/></td>
+                    </tr>
+                    <tr>
+                        <td>Extra Payment:</td>
+                        <td><input type="text" name="extra_pmt" size="10" value="50"/></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="button" onclick="validate()" value="Calculate"/></td>
+                        <td><input type="button" onclick="startOver()" value="Start Over"/></td>
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+        <div id='loan_info'>
+            <table>
+
+                <tr>
+                    <td>Loan Amount:</td>
+                </tr>
+                <tr>
+                    <td>Number of Periods:</td>
+                </tr>
+                <tr>
+                    <td>Interest Rate:</span></td>
+                </tr>
+                <tr>
+                    <td>Extra Payment:</span></td>
+                </tr>
+                <tr>
+                    <td>Payment per Period:</td>
+                </tr>
+                <tr>
+                    <td>Payment with Extra:</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id='table_header'>
+            table header
+        </div>
+
+        <div id='table'>
+            table
+        </div>
+    </div>
 </body>
+
 </html>
