@@ -27,18 +27,18 @@ function validateInv() {
         document.inv_form.rtrn_rate.value="";
     }
     else {
-        calculate(parseFloat(inv_amt), parseInt(periods), parseFloat(rtrn_rate));
+        calculateInv(parseFloat(inv_amt), parseInt(periods), parseFloat(rtrn_rate));
     }
 }
 
-function calculate(inv_amt, periods, rtrn_rate, extra_inv) {
+function calculateInv(inv_amt, periods, rtrn_rate, extra_inv) {
     i = rtrn_rate/100;
 
     var ttl_rtrn = inv_amt*Math.pow((1+i), periods);
 
     var rtrn = ttl_rtrn-inv_amt;
 
-    var avg_rtrn = (rtrn.toFixed(2))/periods;
+    var avg_rtrn = rtrn/periods;
 
 
     var info ="";
@@ -70,7 +70,7 @@ function calculate(inv_amt, periods, rtrn_rate, extra_inv) {
     var counter = 1;
     var total_return = 0;
 
-    for (e = 0; i < periods; i++) {
+    for (e = 0; e < periods; e++) {
 
         towards_rtrn = (i)*current_balance;
         current_balance = current_balance + towards_rtrn;
@@ -79,7 +79,7 @@ function calculate(inv_amt, periods, rtrn_rate, extra_inv) {
         table += "<tr>";
         table += "<td width='60' align='center'>"+ counter +"</td>";
         table += "<td width='65' align='center'>$ "+ towards_rtrn.toFixed(2) +"</td>";
-        table += "<td width='65' align='center'>$ "+ total_return +"</td>";
+        table += "<td width='65' align='center'>$ "+ total_return.toFixed(2) +"</td>";
         table += "<td width='80' align='center'>$ "+ current_balance +"</td>";
         table += "</tr>";
 
