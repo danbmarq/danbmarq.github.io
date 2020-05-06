@@ -2,6 +2,7 @@
 <head>
     <link href='loan.css' rel='stylesheet' type="text/css">
     <script type="text/javascript" src="loan.js"></script>
+    <script type="text/javascript" src="investment.js"></script>
 </head>
 
 <body>
@@ -62,13 +63,112 @@
         </div>
 
         <div id='table_header'>
-            table header
+            <table cellpadding="15" border="2.25px">
+                <tr>
+                    <td width="60px" align="center"><b>Pmt</b></td>
+                    <td width="65px" align="center"><b>Payment</b></td>
+                    <td width="65px" align="center"><b>Principal</b></td>
+                    <td width="65px" align="center"><b>Interest</b></td>
+                    <td width="90px" align="center"><b>Total Interest</b></td>
+                    <td width="80px" align="center"><b>Balance</b></td>
+                </tr>
+
+            </table>
         </div>
 
         <div id='table'>
-            table
+            <table cellpadding="15" border="2.25px">
+                <tr>
+                    <td width="60px" align="center"><b>0</b></td>
+                    <td width="65px" align="center"><b>Payment</b></td>
+                    <td width="65px" align="center"><b>Principal</b></td>
+                    <td width="65px" align="center"><b>Interest</b></td>
+                    <td width="90px" align="center"><b>Total Interest</b></td>
+                    <td width="80px" align="center"><b>Balance</b></td>
+                </tr>
+            </table>
         </div>
     </div>
+
+    <div id='inv_calculator'>
+        <h2> Investment Calculator</h2>
+        <div id="inv_src">
+
+            <form name='inv_form'>
+                <table>
+
+                    <tr>
+                        <td>Investment Amount:<br/><span style="font-size: 75%">Ex. $30,000.00 = 30000</span></td>
+                        <td><input type="text" name="inv_amt" size="10" value="15000"/></td>
+                    </tr>
+                    <tr>
+                        <td>Number of Periods: <br/><span style="font-size: 75%">Ex. 3 Years 3</span></td>
+                        <td><input type="text" name="inv_periods" size="10" value="36"/></td>
+                    </tr>
+                    <tr>
+                        <td>Expected Rate of Return: <br/><span style="font-size: 75%">Ex. 8.00% yearly return = 8</span></td>
+                        <td><input type="text" name="rtrn_rate" size="10" value="8"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" onclick="validateInv()" value="Calculate"/></td>
+                        <td><input type="button" onclick="startOverInv()" value="Start Over"/></td>
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+        <div id='inv_info'>
+            <table>
+
+                <tr>
+                    <td>Initial Investment:</td>
+                </tr>
+                <tr>
+                    <td>Number of Periods:</td>
+                </tr>
+                <tr>
+                    <td>Expected Return Rate:</span></td>
+                </tr>
+                <tr>
+                    <td>Average Return per Period:</td>
+                </tr>
+                <tr>
+                    <td>Total Return:</td>
+                </tr>
+                <tr>
+                    <td>Ending Balance:</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id='inv_table_header'>
+            <table cellpadding="15" border="2.25px">
+                <tr>
+                    <td width="60px" align="center"><b>Pmt</b></td>
+                    <td width="65px" align="center"><b>Payment</b></td>
+                    <td width="65px" align="center"><b>Principal</b></td>
+                    <td width="65px" align="center"><b>Interest</b></td>
+                    <td width="90px" align="center"><b>Total Interest</b></td>
+                    <td width="80px" align="center"><b>Balance</b></td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div id='inv_table'>
+            <table cellpadding="15" border="2.25px">
+                <tr>
+                    <td width="60px" align="center"><b>0</b></td>
+                    <td width="65px" align="center"><b>Payment</b></td>
+                    <td width="65px" align="center"><b>Principal</b></td>
+                    <td width="65px" align="center"><b>Interest</b></td>
+                    <td width="90px" align="center"><b>Total Interest</b></td>
+                    <td width="80px" align="center"><b>Balance</b></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
 </body>
 
 </html>

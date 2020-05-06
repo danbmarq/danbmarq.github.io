@@ -1,7 +1,7 @@
 function startOver() {
-    document.loan_form.loan_amt.value="";
-    document.loan_form.periods.value="";
-    document.loan_form.int_rate.value="";
+    document.loan_form.loan_amt.value="15000";
+    document.loan_form.periods.value="36";
+    document.loan_form.int_rate.value="0.375";
     document.loan_form.extra_pmt.value="0";
 
     document.getElementById("loan_info").innerHTML="";
@@ -28,11 +28,10 @@ function validate() {
         alert("Enter a valid interest rate number.");
         document.loan_form.int_rate.value="";
     }
-    else if(extra_pmt < 0 || isNaN(Number(extra_pmt)) ) {
+    else if(extra_pmt < 0 || isNaN(Number(extra_pmt))) {
         alert("Enter a valid amount of extra payments.");
-        document.loan_form.extra_pmt.value="0"
+        document.loan_form.extra_pmt.value="0";
     }
-
     else {
         calculate(parseFloat(loan_amt), parseInt(periods), parseFloat(int_rate), parseFloat(extra_pmt));
     }
@@ -65,5 +64,39 @@ function calculate(loan_amt, periods, int_rate, extra_pmt) {
     info += "</table>";
 
     document.getElementById("loan_info").innerHTML = info;
+
+    var table="";
+
+    table += "<table cellpadding='15' border='2.25px'>";
+
+    var current_balance = loan_amt;
+    var counter = 1;
+    var total_interest = 0;
+
+    while(current_balance>0) {
+        towards_int = (i)*current_balance;
+        towards_balance = pmt_extra.toFixed(2) - towards_int;
+        towards_balance = towards_balance.toFixed(2)
+        current_balance = current_balance - towards_balance;
+        current_balance = current_balance.toFixed(2)
+        total_interest = total_interest + towards_int;
+
+        table += "<tr>";
+        table += "<td width='60' align='center'>"+ counter +"</td>";
+        table += "<td width='65' align='center'>$ "+ pmt_extra.toFixed(2) +"</td>";
+        table += "<td width='65' align='center'>$ "+ towards_balance +"</td>";
+        table += "<td width='65' align='center'>$ "+ towards_int.toFixed(2) +"</td>";
+        table += "<td width='90' align='center'>$ "+ total_interest.toFixed(2) +"</td>";
+        table += "<td width='80' align='center'>$ "+ current_balance +"</td>";
+        table += "</tr>";
+
+        counter ++;
+
+    }
+
+    table += "</table>";
+
+    document.getElementById("table").innerHTML = table;
+    
 
 }
