@@ -46,21 +46,27 @@ function calculate(loan_amt, periods, int_rate, extra_pmt) {
 
     var pmt_extra = extra_pmt + pmt
 
+    var f = function thousands_separators(num) {
+        var num_parts = num.toString().split(".");
+        num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return num_parts.join(".");
+    };
+
     var info="";
 
     info += "<table width='250'>";
     info += "<tr><td>Loan Amount:</td>";
-    info += "<td align='right'> $ "+loan_amt +"</td></tr>"
+    info += "<td align='right'> $ "+ f(loan_amt) +"</td></tr>"
     info += "<tr><td>Number of Periods:</td>";
     info += "<td align='right'>"+periods +"</td></tr>"
     info += "<tr><td>Interest Rate:</td>";
     info += "<td align='right'>"+int_rate +"%</td></tr>"
     info += "<tr><td>Extra Payment:</td>";
-    info += "<td align='right'>$ "+extra_pmt +"</td></tr>"
+    info += "<td align='right'>$ "+f(extra_pmt) +"</td></tr>"
     info += "<tr><td>Payment per Period:</td>";
-    info += "<td align='right'> $ "+payment +"</td></tr>"
+    info += "<td align='right'> $ "+ f(payment) +"</td></tr>"
     info += "<tr><td>Payment with Extra:</td>";
-    info += "<td align='right'> $ "+ pmt_extra.toFixed(2) +"</td></tr>"
+    info += "<td align='right'> $ "+ f(pmt_extra.toFixed(2)) +"</td></tr>"
     info += "</table>";
 
     document.getElementById("loan_info").innerHTML = info;
@@ -83,11 +89,11 @@ function calculate(loan_amt, periods, int_rate, extra_pmt) {
 
         table += "<tr>";
         table += "<td width='60' align='center'>"+ counter +"</td>";
-        table += "<td width='65' align='center'>$ "+ pmt_extra.toFixed(2) +"</td>";
-        table += "<td width='65' align='center'>$ "+ towards_balance +"</td>";
-        table += "<td width='65' align='center'>$ "+ towards_int.toFixed(2) +"</td>";
-        table += "<td width='90' align='center'>$ "+ total_interest.toFixed(2) +"</td>";
-        table += "<td width='80' align='center'>$ "+ current_balance +"</td>";
+        table += "<td width='65' align='center'>$ "+ f(pmt_extra.toFixed(2)) +"</td>";
+        table += "<td width='65' align='center'>$ "+ f(towards_balance) +"</td>";
+        table += "<td width='65' align='center'>$ "+ f(towards_int.toFixed(2)) +"</td>";
+        table += "<td width='90' align='center'>$ "+ f(total_interest.toFixed(2)) +"</td>";
+        table += "<td width='80' align='center'>$ "+ f(current_balance) +"</td>";
         table += "</tr>";
 
         counter ++;

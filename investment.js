@@ -40,22 +40,28 @@ function calculateInv(inv_amt, periods, rtrn_rate, extra_inv) {
 
     var avg_rtrn = rtrn/periods;
 
+    var f = function thousands_separators(num) {
+        var num_parts = num.toString().split(".");
+        num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return num_parts.join(".");
+    };
+
 
     var info ="";
 
     info += "<table width='250'>";
     info += "<tr><td>Initial Investment:</td>";
-    info += "<td align='right'> $ "+inv_amt +"</td></tr>"
+    info += "<td align='right'> $ "+f(inv_amt) +"</td></tr>"
     info += "<tr><td>Number of Periods:</td>";
-    info += "<td align='right'>"+periods +"</td></tr>"
+    info += "<td align='right'>"+ periods +"</td></tr>"
     info += "<tr><td>Expected Return Rate:</td>";
-    info += "<td align='right'>"+rtrn_rate +"%</td></tr>"
+    info += "<td align='right'>"+ rtrn_rate +"%</td></tr>"
     info += "<tr><td>Average Return per Period:</td>";
-    info += "<td align='right'> $ "+avg_rtrn.toFixed(2) +"</td></tr>"
+    info += "<td align='right'> $ "+ f(avg_rtrn.toFixed(2)) +"</td></tr>"
     info += "<tr><td>Total Return:</td>";
-    info += "<td align='right'> $ "+ rtrn.toFixed(2) +"</td></tr>"
+    info += "<td align='right'> $ "+ f(rtrn.toFixed(2)) +"</td></tr>"
     info += "<tr><td>Ending Balance:</td>";
-    info += "<td align='right'> $ "+ ttl_rtrn.toFixed(2) +"</td></tr>"
+    info += "<td align='right'> $ "+ f(ttl_rtrn.toFixed(2)) +"</td></tr>"
     info += "</table>";
 
     document.getElementById("inv_info").innerHTML = info ;
@@ -75,12 +81,14 @@ function calculateInv(inv_amt, periods, rtrn_rate, extra_inv) {
         towards_rtrn = (i)*current_balance;
         current_balance = current_balance + towards_rtrn;
         total_return = total_return + towards_rtrn;
+        var prncp = current_balance - towards_rtrn;
 
         table += "<tr>";
-        table += "<td width='60' align='center'>"+ counter +"</td>";
-        table += "<td width='65' align='center'>$ "+ towards_rtrn.toFixed(2) +"</td>";
-        table += "<td width='65' align='center'>$ "+ total_return.toFixed(2) +"</td>";
-        table += "<td width='80' align='center'>$ "+ current_balance +"</td>";
+        table += "<td width='75' align='center'>"+ counter +"</td>";
+        table += "<td width='100' align='center'>$ "+ f(prncp.toFixed(2)) +"</td>";
+        table += "<td width='90' align='center'>$ "+ f(towards_rtrn.toFixed(2)) +"</td>";
+        table += "<td width='90' align='center'>$ "+ f(total_return.toFixed(2)) +"</td>";
+        table += "<td width='100' align='center'>$ "+ f(current_balance.toFixed(2)) +"</td>";
         table += "</tr>";
 
         counter ++;
