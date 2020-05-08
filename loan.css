@@ -6,7 +6,9 @@
     padding: 10px;
     background-color: #fff;
 
-    border: 1px solid violet;
+    background:#173563;
+    border-radius: 15px;
+    border: 2px solid #576679;
 }
 
 #loan_src {
@@ -16,6 +18,8 @@
     margin-bottom: 10px;
 
     border: 1px solid blueviolet;
+    background:#ad7fa8;
+    border-radius: 15px;
 }
 
 #loan_info {
@@ -24,27 +28,31 @@
     height: 215px;
     margin-bottom: 10px;
 
-    border: 1px solid palevioletred;
+    border: 1px solid blueviolet;
+    background:#729fcf;
+    border-radius: 15px;
 }
 
 #table_header {
     clear: both;
     width: 648px;
-    height: 75px;
+    height: 45px;
 
-    border: 1px solid blue;
+    background: #5c3566;
+    border-radius: 15px;
 
 }
 
 #table {
     overflow: auto;
     width: 648px;
-    height: 300px;
+    height: 365px;
 
-    border: 1px solid pink;
+    background:#729fcf;
+    border-radius: 15px;
 }
 
-table { align-self:center; font-family: sans-serif; font-size: 13px; margin: 10px;}
+table { align-self:center; font-family: sans-serif; font-size: 17px; width: inherit; padding: 1%;}
 
 
 
@@ -55,7 +63,9 @@ table { align-self:center; font-family: sans-serif; font-size: 13px; margin: 10p
     padding: 10px;
     background-color: #fff;
 
-    border: 1px solid violet;
+    background:#173563;
+    border-radius: 15px;
+    border: 2px solid #576679;
 }
 
 #inv_src {
@@ -65,6 +75,8 @@ table { align-self:center; font-family: sans-serif; font-size: 13px; margin: 10p
     margin-bottom: 10px;
 
     border: 1px solid blueviolet;
+    background:#729fcf;
+    border-radius: 15px;
 }
 
 #inv_info {
@@ -74,21 +86,26 @@ table { align-self:center; font-family: sans-serif; font-size: 13px; margin: 10p
     margin-bottom: 10px;
 
     border: 1px solid palevioletred;
+    background:#fcaf3e;
+    border-radius: 15px;
 }
 
 #inv_table_header {
     clear: both;
     width: 648px;
-    height: 75px;
+    height: 45px;
 
     border: 1px solid blue;
+    background: #f57900;
+    border-radius: 15px;
 
 }
 
 #inv_table {
     overflow: auto;
     width: 648px;
-    height: 300px;
+    height: 365px;
 
-    border: 1px solid pink;
+    background:#fcaf3e;
+    border-radius: 15px;
 }

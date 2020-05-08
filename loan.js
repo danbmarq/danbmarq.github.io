@@ -88,7 +88,7 @@ function calculate(loan_amt, periods, int_rate, extra_pmt) {
         total_interest = total_interest + towards_int;
 
         table += "<tr>";
-        table += "<td width='60' align='center'>"+ counter +"</td>";
+        table += "<td width='45' align='center'>"+ counter +"</td>";
         table += "<td width='65' align='center'>$ "+ f(pmt_extra.toFixed(2)) +"</td>";
         table += "<td width='65' align='center'>$ "+ f(towards_balance) +"</td>";
         table += "<td width='65' align='center'>$ "+ f(towards_int.toFixed(2)) +"</td>";
