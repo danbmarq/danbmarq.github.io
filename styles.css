@@ -2,7 +2,7 @@
 GLOBALS CLASSES
 -------------------------------------------------*/
 *{margin:0; padding:0; background-color: inherit; border: none; color: inherit; border-radius: 75px; text-align: inherit;}
-body{background:#3465a4;}
+body{background:#173563;}
 
 p {font-family:"Trebuchet MS"; color:#729fcf; font-size:15x; line-height:20px;}
 a { text-decoration:none; color:#729fcf;}
@@ -15,9 +15,9 @@ h2{font-family: 'Open Sans', sans-serif; font-size:18px; color:#ad7fa8; font-wei
 h3{color: #ad7fa8;}
 h4{color:#576679;}
 
-header {width:1000px; margin:1.5% auto; background:#173563; overflow:hidden; border-radius: 75px; border: 2px solid #576679;}
+header {width:75%; margin:1.5% auto; background:#173563; overflow:hidden; border-radius: 75px;}
 
-.menu{height: fit-content; font-weight: bold; width:960px; background:#173563; margin-left:1.5%; margin-right:1.5%;}
+.menu{height: fit-content; font-weight: bold; width:auto; background:#173563; margin-left:1.5%; margin-right:1.5%;}
 .menu ul li{float: right; width:100px; margin:1%;}
 .menu ul li a{width:100px; height:40px; line-height:40px; display:block; font-family: 'Open Sans', sans-serif; font-size:14px; color:#96577a; text-align:center; text-transform:uppercase;}
 .menu ul li a:hover{background:#ad7fa8; color:#ffffff; width:100px; height:40px;}
@@ -29,3 +29,8 @@ header {width:1000px; margin:1.5% auto; background:#173563; overflow:hidden; bor
 
 .logo{width:60px; float:left; display: flex;}
 .logo h1{width: 100%; font-family:"Trebuchet MS"; font-size:42px; color:#fcaf3e; text-transform:uppercase; padding-left:20px; padding-top:25px;}
+
+.welcome{width: 75%; margin:1.5% auto; display: inline-flex; place-content: space-evenly;}
+.welcome img{border-radius: 0; width: 45%;}
+
+.intro{width: 45%;}

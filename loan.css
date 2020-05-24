@@ -1,14 +1,14 @@
 
 #calculator {
-    width: 650px;
-    height: 670px;
+    width: fit-content;
+    height: auto;
     margin: 0px auto;
     padding: 10px;
     background-color: #fff;
 
     background:#173563;
     border-radius: 15px;
-    border: 2px solid #576679;
+    float: right;
 }
 
 #loan_src {
@@ -17,8 +17,7 @@
     height: 215px;
     margin-bottom: 10px;
 
-    border: 1px solid blueviolet;
-    background:#ad7fa8;
+    background:#729fcf;
     border-radius: 15px;
 }
 
@@ -28,7 +27,6 @@
     height: 215px;
     margin-bottom: 10px;
 
-    border: 1px solid blueviolet;
     background:#729fcf;
     border-radius: 15px;
 }
@@ -57,15 +55,15 @@ table { align-self:center; font-family: sans-serif; font-size: 17px; width: inhe
 
 
 #inv_calculator {
-    width: 650px;
-    height: 670px;
+    width: fit-content;
+    height: auto;
     margin: 0px auto;
     padding: 10px;
     background-color: #fff;
 
     background:#173563;
     border-radius: 15px;
-    border: 2px solid #576679;
+    float: left;
 }
 
 #inv_src {
@@ -74,7 +72,6 @@ table { align-self:center; font-family: sans-serif; font-size: 17px; width: inhe
     height: 215px;
     margin-bottom: 10px;
 
-    border: 1px solid blueviolet;
     background:#729fcf;
     border-radius: 15px;
 }
@@ -85,8 +82,7 @@ table { align-self:center; font-family: sans-serif; font-size: 17px; width: inhe
     height: 215px;
     margin-bottom: 10px;
 
-    border: 1px solid palevioletred;
-    background:#fcaf3e;
+    background:#729fcf;
     border-radius: 15px;
 }
 
@@ -95,7 +91,6 @@ table { align-self:center; font-family: sans-serif; font-size: 17px; width: inhe
     width: 648px;
     height: 45px;
 
-    border: 1px solid blue;
     background: #f57900;
     border-radius: 15px;
 
@@ -106,6 +101,6 @@ table { align-self:center; font-family: sans-serif; font-size: 17px; width: inhe
     width: 648px;
     height: 365px;
 
-    background:#fcaf3e;
+    background:#729fcf;
     border-radius: 15px;
 }
