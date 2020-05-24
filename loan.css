@@ -1,6 +1,5 @@
 
 #calculator {
-    width: fit-content;
     height: auto;
     margin: 0px auto;
     padding: 10px;
@@ -54,7 +53,6 @@ table { align-self:center; font-family: sans-serif; font-size: 17px; width: inhe
 
 
 #inv_calculator {
-    width: fit-content;
     height: auto;
     margin: 0px auto;
     padding: 10px;
@@ -101,4 +99,80 @@ table { align-self:center; font-family: sans-serif; font-size: 17px; width: inhe
 
     background:#729fcf;
     border-radius: 15px;
+}
+
+
+@media only screen and (max-width: 470px) {
+    #loan_src {
+        width: 460px;
+        height: 215px;
+        margin-bottom: 10px;
+    
+        background:#729fcf;
+        border-radius: 15px;
+    }
+    
+    #loan_info {
+        width: 460px;
+        height: 215px;
+        margin-bottom: 10px;
+    
+        background:#729fcf;
+        border-radius: 15px;
+    }
+    
+    #table_header {
+        clear: both;
+        width: 460px;
+        height: 60px;
+    
+        background: #5c3566;
+        border-radius: 15px;
+    
+    }
+    
+    #table {
+        overflow: auto;
+        width: 460px;
+        height: 265px;
+    
+        background:#729fcf;
+        border-radius: 15px;
+    }
+    #inv_src {
+        width: 460px;
+        height: 215px;
+        margin-bottom: 10px;
+    
+        background:#729fcf;
+        border-radius: 15px;
+    }
+    
+    #inv_info {
+        width: 460px;
+        height: 215px;
+        margin-bottom: 10px;
+    
+        background:#729fcf;
+        border-radius: 15px;
+    }
+    
+    #inv_table_header {
+        clear: both;
+        width: 460px;
+        height: 60px;
+    
+        background: #f57900;
+        border-radius: 15px;
+    
+    }
+    
+    #inv_table {
+        overflow: auto;
+        width: 460px;
+        height: 265px;
+    
+        background:#729fcf;
+        border-radius: 15px;
+    }
 }
