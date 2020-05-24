@@ -30,7 +30,7 @@ header {width:75%; margin:1.5% auto; background:#173563; overflow:hidden; border
 .logo{width:60px; float:left; display: flex;}
 .logo h1{width: 100%; font-family:"Trebuchet MS"; font-size:42px; color:#fcaf3e; text-transform:uppercase; padding-left:20px; padding-top:25px;}
 
-.welcome{width: 75%; margin:1.5% auto; display: inline-flex; place-content: space-evenly;}
-.welcome img{border-radius: 0; width: 45%;}
+.welcome{margin:1.5% auto; display: inline-flex; place-content: space-evenly;}
+.welcome img{border-radius: 0; width: 35%;}
 
 .intro{width: 45%;}
