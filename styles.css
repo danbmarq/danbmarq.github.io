@@ -37,6 +37,6 @@ header {width:75%; margin:1.5% auto; background:#173563; overflow:hidden; border
 
 .calculators{display: inline-flex; place-content: space-evenly; flex-wrap: wrap;}
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 400px) {
     .intro{width: 85%;}
 }
