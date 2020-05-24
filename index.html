@@ -27,166 +27,168 @@
             <h1>The Financial Literacy Learning Journey!</h1>
             <p>The tools and resources you have access to will help you determine what you can and cannot do to improve your financial literacy, we are here to help provide some resources to help you along the way.</p>
         </div>
-        <img src="http://drive.google.com/uc?export=view&id=1EXg2spnG-_Saar-kVRZxQE3WnLAjnbFu"/> 
+        <div><img src="http://drive.google.com/uc?export=view&id=1EXg2spnG-_Saar-kVRZxQE3WnLAjnbFu"/></div>
     </div>
-    <div id='calculator'>
-        <h1> Loan Calculator</h1>
-        <div id="loan_src">
-
-            <form name='loan_form'>
+    <div class='calculators'>
+        <div id='calculator'>
+            <h1> Loan Calculator</h1>
+            <div id="loan_src">
+    
+                <form name='loan_form'>
+                    <table>
+    
+                        <tr>
+                            <td>Loan Amount:<br/><span style="font-size: 75%">Ex. $30,000.00 = 30000</span></td>
+                            <td><div class="input"><input type="text" name="loan_amt" size="10" value="15000"/></div></td>
+                        </tr>
+                        <tr>
+                            <td>Number of Periods: <br/><span style="font-size: 75%">Ex. 3 Yrs compounded monthly (3*12) = 36</span></td>
+                            <td><input class="input" type="text" name="periods" size="10" value="36"/></td>
+                        </tr>
+                        <tr>
+                            <td>Interest Rate: <br/><span style="font-size: 75%">Ex. 4.5% APR compounded monthly (4.5/12) = 0.375</span></td>
+                            <td><input class="input" type="text" name="int_rate" size="10" value="0.375"/></td>
+                        </tr>
+                        <tr>
+                            <td>Extra Payment:</td>
+                            <td><input class="input" type="text" name="extra_pmt" size="10" value="50"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><div class="button"><input type="button" onclick="validate()" value="Calculate"/></div></td>
+                            <td><div class="button"><input type="button" onclick="startOver()" value="Start Over"/></div></td>
+                        </tr>
+                    </table>
+                </form>
+    
+            </div>
+            <div id='loan_info'>
                 <table>
-
+    
                     <tr>
-                        <td>Loan Amount:<br/><span style="font-size: 75%">Ex. $30,000.00 = 30000</span></td>
-                        <td><div class="input"><input type="text" name="loan_amt" size="10" value="15000"/></div></td>
+                        <td>Loan Amount:</td>
                     </tr>
                     <tr>
-                        <td>Number of Periods: <br/><span style="font-size: 75%">Ex. 3 Yrs compounded monthly (3*12) = 36</span></td>
-                        <td><input class="input" type="text" name="periods" size="10" value="36"/></td>
+                        <td>Number of Periods:</td>
                     </tr>
                     <tr>
-                        <td>Interest Rate: <br/><span style="font-size: 75%">Ex. 4.5% APR compounded monthly (4.5/12) = 0.375</span></td>
-                        <td><input class="input" type="text" name="int_rate" size="10" value="0.375"/></td>
+                        <td>Interest Rate:</span></td>
                     </tr>
                     <tr>
-                        <td>Extra Payment:</td>
-                        <td><input class="input" type="text" name="extra_pmt" size="10" value="50"/></td>
+                        <td>Extra Payment:</span></td>
                     </tr>
-                    
                     <tr>
-                        <td><div class="button"><input type="button" onclick="validate()" value="Calculate"/></div></td>
-                        <td><div class="button"><input type="button" onclick="startOver()" value="Start Over"/></div></td>
+                        <td>Payment per Period:</td>
+                    </tr>
+                    <tr>
+                        <td>Payment with Extra:</td>
                     </tr>
                 </table>
-            </form>
-
-        </div>
-        <div id='loan_info'>
-            <table>
-
-                <tr>
-                    <td>Loan Amount:</td>
-                </tr>
-                <tr>
-                    <td>Number of Periods:</td>
-                </tr>
-                <tr>
-                    <td>Interest Rate:</span></td>
-                </tr>
-                <tr>
-                    <td>Extra Payment:</span></td>
-                </tr>
-                <tr>
-                    <td>Payment per Period:</td>
-                </tr>
-                <tr>
-                    <td>Payment with Extra:</td>
-                </tr>
-            </table>
-        </div>
-
-        <div id='table_header'>
-            <table cellpadding="15" border="2.25px">
-                <tr>
-                    <td width="45px" align="center"><b>Pmt</b></td>
-                    <td width="65px" align="center"><b>Payment</b></td>
-                    <td width="65px" align="center"><b>Principal</b></td>
-                    <td width="65px" align="center"><b>Interest</b></td>
-                    <td width="90px" align="center"><b>Total Interest</b></td>
-                    <td width="80px" align="center"><b>Balance</b></td>
-                </tr>
-
-            </table>
-        </div>
-
-        <div id='table'>
-            <table cellpadding="15" border="2.25px">
-                <tr>
-                    <td width="45px" align="center"><b>0</b></td>
-                    <td width="65px" align="center"><b>Payment</b></td>
-                    <td width="65px" align="center"><b>Principal</b></td>
-                    <td width="65px" align="center"><b>Interest</b></td>
-                    <td width="90px" align="center"><b>Total Interest</b></td>
-                    <td width="80px" align="center"><b>Balance</b></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    <div id='inv_calculator'>
-        <h1> Investment Calculator</h1>
-        <div id="inv_src">
-
-            <form name='inv_form'>
-                <table>
-
+            </div>
+    
+            <div id='table_header'>
+                <table cellpadding="15" border="2.25px">
                     <tr>
-                        <td>Investment Amount:<br/><span style="font-size: 75%">Ex. $30,000.00 = 30000</span></td>
-                        <td><input class="input" type="text" name="inv_amt" size="10" value="15000"/></td>
+                        <td width="45px" align="center"><b>Pmt</b></td>
+                        <td width="65px" align="center"><b>Payment</b></td>
+                        <td width="65px" align="center"><b>Principal</b></td>
+                        <td width="65px" align="center"><b>Interest</b></td>
+                        <td width="90px" align="center"><b>Total Interest</b></td>
+                        <td width="80px" align="center"><b>Balance</b></td>
                     </tr>
+    
+                </table>
+            </div>
+    
+            <div id='table'>
+                <table cellpadding="15" border="2.25px">
                     <tr>
-                        <td>Number of Periods: <br/><span style="font-size: 75%">Ex. 3 Years 3</span></td>
-                        <td><input class="input" type="text" name="inv_periods" size="10" value="3"/></td>
-                    </tr>
-                    <tr>
-                        <td>Expected Rate of Return: <br/><span style="font-size: 75%">Ex. 8.00% yearly return = 8</span></td>
-                        <td><input class="input" type="text" name="rtrn_rate" size="10" value="8"/></td>
-                    </tr>
-                    <tr>
-                        <td><div class="button"><input type="button" onclick="validateInv()" value="Calculate"/></div></td>
-                        <td><div class="button"><input type="button" onclick="startOverInv()" value="Start Over"/></div></td>
+                        <td width="45px" align="center"><b>0</b></td>
+                        <td width="65px" align="center"><b>Payment</b></td>
+                        <td width="65px" align="center"><b>Principal</b></td>
+                        <td width="65px" align="center"><b>Interest</b></td>
+                        <td width="90px" align="center"><b>Total Interest</b></td>
+                        <td width="80px" align="center"><b>Balance</b></td>
                     </tr>
                 </table>
-            </form>
-
+            </div>
         </div>
-        <div id='inv_info'>
-            <table>
-
-                <tr>
-                    <td>Initial Investment:</td>
-                </tr>
-                <tr>
-                    <td>Number of Periods:</td>
-                </tr>
-                <tr>
-                    <td>Expected Return Rate:</span></td>
-                </tr>
-                <tr>
-                    <td>Average Return per Period:</td>
-                </tr>
-                <tr>
-                    <td>Total Return:</td>
-                </tr>
-                <tr>
-                    <td>Ending Balance:</td>
-                </tr>
-            </table>
-        </div>
-
-        <div id='inv_table_header'>
-            <table cellpadding="15" border="2.25px">
-                <tr>
-                    <td width="75px" align="center"><b>Period</b></td>
-                    <td width="100px" align="center"><b>Balance</b></td>
-                    <td width="90px" align="center"><b>Int Earned</b></td>
-                    <td width="90px" align="center"><b>Profit</b></td>
-                    <td width="100px" align="center"><b>Balance</b></td>
-                </tr>
-
-            </table>
-        </div>
-
-        <div id='inv_table'>
-            <table cellpadding="15" border="2.25px">
-                <tr>
-                    <td width="75px" align="center"><b>Period</b></td>
-                    <td width="100px" align="center"><b>Balance</b></td>
-                    <td width="90px" align="center"><b>Int Earned</b></td>
-                    <td width="90px" align="center"><b>Profit</b></td>
-                    <td width="100px" align="center"><b>Balance</b></td>
-                </tr>
-            </table>
+    
+        <div id='inv_calculator'>
+            <h1> Investment Calculator</h1>
+            <div id="inv_src">
+    
+                <form name='inv_form'>
+                    <table>
+    
+                        <tr>
+                            <td>Investment Amount:<br/><span style="font-size: 75%">Ex. $30,000.00 = 30000</span></td>
+                            <td><input class="input" type="text" name="inv_amt" size="10" value="15000"/></td>
+                        </tr>
+                        <tr>
+                            <td>Number of Periods: <br/><span style="font-size: 75%">Ex. 3 Years 3</span></td>
+                            <td><input class="input" type="text" name="inv_periods" size="10" value="3"/></td>
+                        </tr>
+                        <tr>
+                            <td>Expected Rate of Return: <br/><span style="font-size: 75%">Ex. 8.00% yearly return = 8</span></td>
+                            <td><input class="input" type="text" name="rtrn_rate" size="10" value="8"/></td>
+                        </tr>
+                        <tr>
+                            <td><div class="button"><input type="button" onclick="validateInv()" value="Calculate"/></div></td>
+                            <td><div class="button"><input type="button" onclick="startOverInv()" value="Start Over"/></div></td>
+                        </tr>
+                    </table>
+                </form>
+    
+            </div>
+            <div id='inv_info'>
+                <table>
+    
+                    <tr>
+                        <td>Initial Investment:</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Periods:</td>
+                    </tr>
+                    <tr>
+                        <td>Expected Return Rate:</span></td>
+                    </tr>
+                    <tr>
+                        <td>Average Return per Period:</td>
+                    </tr>
+                    <tr>
+                        <td>Total Return:</td>
+                    </tr>
+                    <tr>
+                        <td>Ending Balance:</td>
+                    </tr>
+                </table>
+            </div>
+    
+            <div id='inv_table_header'>
+                <table cellpadding="15" border="2.25px">
+                    <tr>
+                        <td width="75px" align="center"><b>Period</b></td>
+                        <td width="100px" align="center"><b>Balance</b></td>
+                        <td width="90px" align="center"><b>Int Earned</b></td>
+                        <td width="90px" align="center"><b>Profit</b></td>
+                        <td width="100px" align="center"><b>Balance</b></td>
+                    </tr>
+    
+                </table>
+            </div>
+    
+            <div id='inv_table'>
+                <table cellpadding="15" border="2.25px">
+                    <tr>
+                        <td width="75px" align="center"><b>Period</b></td>
+                        <td width="100px" align="center"><b>Balance</b></td>
+                        <td width="90px" align="center"><b>Int Earned</b></td>
+                        <td width="90px" align="center"><b>Profit</b></td>
+                        <td width="100px" align="center"><b>Balance</b></td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 
