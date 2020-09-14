@@ -16,8 +16,8 @@
                 <a href="fine-lit.com" class="active"><img src="finelit logo.png"></a>
             </div>
                 <ul>
-                    <li><a href="index.html">tools</a></li>
-                    <li><a href="fine-lit.com">blog</a></li>
+                    <li><a href="index.html">Tools</a></li>
+                    <li><a href="https://de59.github.io/">About Me</a></li>
                 </ul>
 
           </div>
@@ -117,33 +117,38 @@
         <div id='inv_calculator'>
             <h1> Investment Calculator</h1>
             <div id="inv_src">
-    
+          
                 <form name='inv_form'>
                     <table>
-    
+          
                         <tr>
-                            <td>Investment Amount:<br/><span style="font-size: 75%">Ex. $30,000.00 = 30000</span></td>
-                            <td><input class="input" type="text" name="inv_amt" size="10" value="15000"/></td>
+                            <td>Loan Amount:<br/><span style="font-size: 75%">Ex. $30,000.00 = 30000</span></td>
+                            <td><div class="input"><input type="text" name="inv_amt" size="10" placeholder="15000"/></div></td>
                         </tr>
                         <tr>
-                            <td>Number of Periods: <br/><span style="font-size: 75%">Ex. 3 Years 3</span></td>
-                            <td><input class="input" type="text" name="inv_periods" size="10" value="3"/></td>
+                            <td>Number of Periods: <br/><span style="font-size: 75%">Ex. 3 Yrs = 3</span></td>
+                            <td><input class="input" type="text" name="inv_periods" size="10" placeholder="3"/></td>
                         </tr>
                         <tr>
-                            <td>Expected Rate of Return: <br/><span style="font-size: 75%">Ex. 8.00% yearly return = 8</span></td>
-                            <td><input class="input" type="text" name="rtrn_rate" size="10" value="8"/></td>
+                            <td>Interest Rate: <br/><span style="font-size: 75%">Ex. 8.00% yearly return = 8</span></td>
+                            <td><input class="input" type="text" name="rtrn_rate" size="10" placeholder="8.0"/></td>
                         </tr>
+                        <tr>
+                            <td>Extra Contribution: <br/><span style="font-size: 75%">Monthly Contributions</span></td>
+                            <td><input class="input" type="text" name="extra_cont" size="10" placeholder="50"/></td>
+                        </tr>
+                        
                         <tr>
                             <td><div class="button"><input type="button" onclick="validateInv()" value="Calculate"/></div></td>
                             <td><div class="button"><input type="button" onclick="startOverInv()" value="Start Over"/></div></td>
                         </tr>
                     </table>
                 </form>
-    
+          
             </div>
             <div id='inv_info'>
                 <table>
-    
+          
                     <tr>
                         <td>Initial Investment:</td>
                     </tr>
@@ -151,10 +156,10 @@
                         <td>Number of Periods:</td>
                     </tr>
                     <tr>
-                        <td>Expected Return Rate:</span></td>
+                        <td>Return Rate:</span></td>
                     </tr>
                     <tr>
-                        <td>Average Return per Period:</td>
+                        <td>Total Contributions:</span></td>
                     </tr>
                     <tr>
                         <td>Total Return:</td>
@@ -164,34 +169,35 @@
                     </tr>
                 </table>
             </div>
-    
+          
             <div id='inv_table_header'>
-                <table cellpadding="15" border="2.25px">
+                <table cellpadding="10" border="2.25px">
                     <tr>
-                        <td width="75px" align="center"><b>Period</b></td>
-                        <td width="100px" align="center"><b>Balance</b></td>
-                        <td width="90px" align="center"><b>Int Earned</b></td>
-                        <td width="90px" align="center"><b>Profit</b></td>
-                        <td width="100px" align="center"><b>Balance</b></td>
+                        <td align="center"><b>Months</b></td>
+                        <td align="center"><b>Balance</b></td>
+                        <td align="center"><b>Int. Earned</b></td>
+                        <td align="center"><b>Contributions</b></td>
+                        <td align="center"><b>Profit</b></td>
+                        <td align="center"><b>Balance</b></td>
                     </tr>
-    
+          
                 </table>
             </div>
-    
-            <div id='inv_table'>
-                <table cellpadding="15" border="2.25px">
+          
+            <div id='inv_table' style="font-size: 1rem;">
+                <table cellpadding="10" border="2.25px">
                     <tr>
-                        <td width="75px" align="center"><b>Period</b></td>
-                        <td width="100px" align="center"><b>Balance</b></td>
-                        <td width="90px" align="center"><b>Int Earned</b></td>
-                        <td width="90px" align="center"><b>Profit</b></td>
-                        <td width="100px" align="center"><b>Balance</b></td>
+                        <td align="center"><b>Months</b></td>
+                        <td align="center"><b>Balance</b></td>
+                        <td align="center"><b>Int. Earned</b></td>
+                        <td align="center"><b>Contributions</b></td>
+                        <td align="center"><b>Profit</b></td>
+                        <td align="center"><b>Balance</b></td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>

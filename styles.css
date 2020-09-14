@@ -39,4 +39,5 @@ header {width:75%; margin:1.5% auto; background:#173563; overflow:hidden; border
 
 @media only screen and (max-width: 370px) {
     .intro{width: 85%;}
+    header {width:95%;}
 }
